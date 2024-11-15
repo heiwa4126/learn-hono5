@@ -1,0 +1,16 @@
+{
+	"name": "hono3",
+	"type": "module",
+	"scripts": {
+		"start": "node --watch --experimental-specifier-resolution=node --import tsx src/index.ts",
+		"dev": "tsx watch src/index.ts"
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.13.7",
+		"hono": "^4.6.10"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.6",
+		"tsx": "^4.19.2"
+	}
+}
