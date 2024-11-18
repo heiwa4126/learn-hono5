@@ -20,6 +20,9 @@ importers:
       hono:
         specifier: ^4.6.10
         version: 4.6.10
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
     devDependencies:
       '@types/node':
         specifier: ^20.17.6
@@ -234,6 +237,11 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
+  typescript@5.6.3:
+    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
@@ -396,6 +404,8 @@ snapshots:
       get-tsconfig: 4.8.1
     optionalDependencies:
       fsevents: 2.3.3
+
+  typescript@5.6.3: {}
 
   undici-types@6.19.8: {}
 
