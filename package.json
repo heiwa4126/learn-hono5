@@ -10,17 +10,15 @@
 		"dev": "tsx watch src/index.ts",
 		"format": "biome format --write . && dprint fmt",
 		"check": "biome check --write . && dprint check",
-		"build": "tsc --project tsconfig.mjs.json",
-		"preview": "node dist/ems/index.js"
+		"build": "tsc --project tsconfig.ems.json",
+		"preview": "./bin/cli.js"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.13.7",
-		"@hono/swagger-ui": "^0.4.1",
-		"@hono/zod-openapi": "^0.17.0",
-		"hono": "^4.6.10",
-		"typescript": "^5.6.3"
+		"hono": "^4.6.10"
 	},
 	"devDependencies": {
+		"typescript": "^5.6.3",
 		"@types/node": "^20.17.6",
 		"tsx": "^4.19.2"
 	}

@@ -1,15 +1,16 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"module": "ESNext",
-		"outDir": "./dist/ems",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"rootDir": "./src",
+		"outDir": "./dist/ems",
 		"declaration": true,
 		"declarationDir": "./dist/ems",
-		"moduleResolution": "node",
-		"esModuleInterop": true,
 		"resolveJsonModule": true,
 		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": false,
 		"jsx": "react-jsx",
 		"jsxImportSource": "hono/jsx",
 		"verbatimModuleSyntax": false

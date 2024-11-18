@@ -1,5 +1,5 @@
 import { serve } from "@hono/node-server";
-import { app } from "./app.js";
+import { app } from "./app.js"; // Import the app from app.ts
 
 const port = 3000;
 console.log(`Server is running on http://localhost:${port}`);
