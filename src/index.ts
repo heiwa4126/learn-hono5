@@ -1,4 +1,5 @@
 import { serve } from "@hono/node-server";
+import { swaggerUI } from "@hono/swagger-ui";
 import { app as app1 } from "./app1.js"; // Import the app from app1.tsx
 import { app } from "./app2.js";
 
@@ -12,6 +13,8 @@ app.doc("/doc", {
 		title: "My API",
 	},
 });
+
+app.get("/ui", swaggerUI({ url: "/doc" }));
 
 const port = 3000;
 console.log(`Server is running on http://localhost:${port}`);
