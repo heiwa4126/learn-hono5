@@ -12,11 +12,16 @@
 		"check": "biome check --write . && dprint check",
 		"build": "tsc --project tsconfig.ems.json",
 		"preview": "./bin/cli.js",
-		"bundle": "esbuild --platform=node --format=esm --minify --drop:debugger --bundle --outfile=bundle/hono3.js src/index.ts"
+		"bundle": "esbuild --platform=node --format=esm --minify --drop:debugger --bundle --outfile=bundle/hono3.js src/index.ts",
+		"hello": "curl http://localhost:3000/hello ; echo",
+		"author": "tsx scripts/postAuthor.ts",
+		"author:wrong": "tsx scripts/postAuthorWrong1.ts"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.13.7",
-		"hono": "^4.6.10"
+		"@hono/zod-validator": "^0.4.1",
+		"hono": "^4.6.10",
+		"zod": "^3.23.8"
 	},
 	"devDependencies": {
 		"@types/node": "^20.17.6",

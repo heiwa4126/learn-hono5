@@ -23,6 +23,8 @@ tsc なのでエラーにうるさい。
 ```sh
 npm run build
 npm pack
+# もしnpm.jsに発行するなら
+npm publish
 ```
 
 hono3-x.x.x.tar.gz がプロジェクトルートに出来るので、
@@ -33,8 +35,6 @@ npm i hono3-x.x.x.tar.gz -g
 hono3 &
 curl http://localhost:3000
 ```
-
-TODO: PID ファイルとか作るべきかも。
 
 ## バンドル版
 
@@ -53,3 +53,8 @@ node hono3.js
 
 で実行。esbuildなので厳密な型チェックが無い。
 `npm run build`でtsc通してからの方が安全。
+
+## TODO
+
+CLIつけて、ポートの変更や
+PID ファイルとか作るべきかも。
