@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
+		"module": "ESNext",
+		"moduleResolution": "Node",
 		"rootDir": "./src",
 		"outDir": "./dist/ems",
 		"declaration": true,
@@ -10,10 +10,12 @@
 		"resolveJsonModule": true,
 		"strict": true,
 		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": false,
+		"noEmitOnError": true,
+		"removeComments": true,
+		"forceConsistentCasingInFileNames": true,
+		"incremental": true,
 		"jsx": "react-jsx",
-		"jsxImportSource": "hono/jsx",
-		"verbatimModuleSyntax": false
+		"jsxImportSource": "hono/jsx"
 	},
 	"include": ["src"],
 	"exclude": ["node_modules", "**/*.test.ts"]
