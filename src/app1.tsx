@@ -25,12 +25,12 @@ app.get("/hello", (c) => {
 	return c.text("Hello Hono!");
 });
 
-const schema = z.object({
+const AuthorSchema = z.object({
 	name: z.string(),
 	age: z.number(),
 });
 
-app.post("/author", zValidator("json", schema), (c) => {
+app.post("/author", zValidator("json", AuthorSchema), (c) => {
 	const data = c.req.valid("json");
 	return c.json({
 		success: true,

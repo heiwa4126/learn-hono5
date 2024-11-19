@@ -1,7 +1,7 @@
 const EndPoint = "http://localhost:3000";
 
 export async function postAuthor(data: object) {
-	const url = `${EndPoint}/author`;
+	const url = `${EndPoint}/api/author`;
 
 	try {
 		const response = await fetch(url, {
