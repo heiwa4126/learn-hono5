@@ -5,10 +5,10 @@ import { ErrorSchema } from "./schema";
 export const app = new OpenAPIHono();
 
 const RequestSchema = z.object({
-	name: z.string().openapi({
+	name: z.string().min(3).openapi({
 		example: "Naoki",
 	}),
-	age: z.number().openapi({
+	age: z.number().min(0).max(150).openapi({
 		example: 35,
 	}),
 });

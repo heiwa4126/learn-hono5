@@ -11,16 +11,11 @@ app.route("/", base1);
 app.route("/api", app1);
 app.route("/api", app2);
 
-// The OpenAPI documentation will be available at /doc
-app.doc("/doc", {
-	openapi: "3.0.0",
-	info: {
-		version: "1.0.0",
-		title: "hono3",
-	},
-});
+const docs = "/docs";
+// app.doc("/doc", { openapi: "3.0.0", info: { version: "1.0.0", title: "hono3" } });
+app.doc31(docs, { openapi: "3.1.0", info: { version: "1.0.0", title: "hono3" } });
 
-app.get("/ui", swaggerUI({ url: "/doc" }));
+app.get("/ui", swaggerUI({ url: docs }));
 
 const port = 3000;
 console.log(`Server is running on http://localhost:${port}`);
