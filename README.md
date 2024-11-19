@@ -1,6 +1,8 @@
 # hono-learn3
 
-hono の練習#3
+hono の練習 #3
+
+Zod で OpenAPI で Swagger UI 付き。
 
 ## 開発
 
