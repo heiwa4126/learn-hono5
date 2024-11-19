@@ -18,14 +18,37 @@ export async function postAuthor(data: object) {
 		for (const [key, value] of response.headers) {
 			console.log(`${key}: ${value}`);
 		}
+		const responseData = await response.json();
+		console.log("Response Body:", responseData);
 
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
 		}
-
-		const responseData = await response.json();
-		console.log("Response Body:", responseData);
 	} catch (error) {
 		console.error("Error posting author:", error);
+	}
+}
+
+export async function getUsers(id: string) {
+	const url = `${EndPoint}/api/users/${id}`;
+
+	try {
+		const response = await fetch(url, {
+			method: "GET",
+		});
+
+		// レスポンスヘッダの表示
+		console.log("Response Headers:");
+		for (const [key, value] of response.headers) {
+			console.log(`${key}: ${value}`);
+		}
+		const responseData = await response.json();
+		console.log("Response Body:", responseData);
+
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+	} catch (error) {
+		console.error("Error getting users:", error);
 	}
 }

@@ -3,6 +3,7 @@
 hono の練習 #3
 
 Zod で OpenAPI で Swagger UI 付き。
+body が JSON の POST の書き方がちょっと難しかった。(`src/app1.ts`)。
 
 ## 開発
 

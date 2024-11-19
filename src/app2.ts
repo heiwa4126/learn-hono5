@@ -1,4 +1,5 @@
 import { OpenAPIHono, createRoute, z } from "@hono/zod-openapi";
+import { ErrorSchema } from "./schema";
 
 export const app = new OpenAPIHono();
 
@@ -28,15 +29,6 @@ const UserSchema = z
 		}),
 	})
 	.openapi("User");
-
-const ErrorSchema = z.object({
-	code: z.number().openapi({
-		example: 400,
-	}),
-	message: z.string().openapi({
-		example: "Bad Request",
-	}),
-});
 
 const route = createRoute({
 	method: "get",
