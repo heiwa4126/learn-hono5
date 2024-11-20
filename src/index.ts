@@ -12,8 +12,8 @@ app.route("/api", app1);
 app.route("/api", app2);
 
 const docs = "/docs";
-// app.doc("/doc", { openapi: "3.0.0", info: { version: "1.0.0", title: "hono3" } });
-app.doc31(docs, { openapi: "3.1.0", info: { version: "1.0.0", title: "hono3" } });
+// app.doc(docs, { openapi: "3.0.0", info: { version: "1.0.0", title: "hono5" } });
+app.doc31(docs, { openapi: "3.1.0", info: { version: "1.0.0", title: "hono5" } });
 
 app.get("/ui", swaggerUI({ url: docs }));
 

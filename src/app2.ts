@@ -4,7 +4,7 @@ import { ErrorSchema } from "./schema";
 export const app = new OpenAPIHono();
 
 const ParamsSchema = z.object({
-	id: z //id は
+	id: z // id は
 		.string() // 文字列で
 		.min(3) // 最小3文字
 		.openapi({
