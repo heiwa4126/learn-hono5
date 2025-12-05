@@ -10,13 +10,16 @@ body が JSON の POST の書き方がちょっと難しかった。(`src/app1.t
 tsx (esbuild) で実行。
 
 ```sh
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 ```sh
+# 簡単なテスト
 curl http://localhost:3000
 ```
+
+Swagger UI は <http://localhost:3000/ui>
 
 ## パッケージのビルド
 
@@ -24,10 +27,10 @@ tsc で ECMAScript にトランスパイル。
 tsc なのでエラーにうるさい。
 
 ```sh
-npm run build
-npm pack
+pnpm run build
+pnpm pack
 # もしnpm.jsに発行するなら
-npm publish
+pnpm publish
 ```
 
 hono5-x.x.x.tar.gz がプロジェクトルートに出来るので、
@@ -41,21 +44,21 @@ curl http://localhost:3000
 
 ## バンドル版
 
-esbuild で全部を1個のファイルにする。
+esbuild で全部を 1 個のファイルにする。
 
 ```sh
-npm run bundle
+pnpm run bundle
 # bundle/hono5.js ができる (build不要)
 ```
 
 これを
 
 ```sh
-node hono5.js
+node bundle/hono5.js
 ```
 
 で実行。esbuild なので厳密な型チェックが無い。
-`npm run build`でtsc通してからの方が安全。
+`npm run build`で tsc 通してからの方が安全。
 
 ## TODO
 
