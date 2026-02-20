@@ -30,7 +30,7 @@
 		"@hono/swagger-ui": "^0.5.3",
 		"@hono/zod-openapi": "^1.2.0",
 		"@hono/zod-validator": "^0.7.6",
-		"hono": "^4.11.7",
+		"hono": "^4.11.10",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
