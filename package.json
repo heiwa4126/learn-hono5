@@ -28,14 +28,14 @@
 	"dependencies": {
 		"@hono/node-server": "^1.19.9",
 		"@hono/swagger-ui": "^0.5.3",
-		"@hono/zod-openapi": "^1.2.0",
+		"@hono/zod-openapi": "^1.2.2",
 		"@hono/zod-validator": "^0.7.6",
-		"hono": "^4.11.10",
+		"hono": "^4.12.3",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
-		"@types/node": "^25.2.0",
-		"esbuild": "^0.27.2",
+		"@types/node": "^25.3.3",
+		"esbuild": "^0.27.3",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3"
 	}
