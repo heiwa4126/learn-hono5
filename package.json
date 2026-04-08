@@ -1,21 +1,22 @@
 {
 	"name": "hono5",
-	"type": "module",
 	"version": "0.0.1",
-	"module": "dist/ems/index.js",
+	"bin": {
+		"hono5": "bin/cli.js"
+	},
 	"files": [
 		"dist/ems/",
 		"bin"
 	],
-	"bin": {
-		"hono5": "bin/cli.js"
-	},
+	"type": "module",
+	"module": "dist/ems/index.js",
 	"scripts": {
 		"start": "node --watch --experimental-specifier-resolution=node --import tsx src/index.ts",
 		"dev": "tsx watch src/index.ts",
-		"format": "biome format --write .",
-		"format:full": "pnpm pkg fix && biome format --write . && dprint fmt && textlint --fix \"**/*.md\"",
-		"check": "biome check --write . && dprint check",
+		"preinstall": "pnpm audit",
+		"format": "oxfmt",
+		"lint": "oxlint",
+		"check": "oxfmt && oxlint --fix",
 		"build": "rm -rf ./dist/ems && tsc --project tsconfig.ems.json",
 		"preview": "./bin/cli.js",
 		"bundle": "esbuild --platform=node --format=esm --minify --drop:debugger --bundle --outfile=bundle/hono5.js src/index.ts",
